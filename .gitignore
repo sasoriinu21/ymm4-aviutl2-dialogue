@@ -1,0 +1,6 @@
+**/build/
+**/bin/
+**/obj/
+**/.api-inspector/
+**/.appdata/
+**/.dotnet-home/
