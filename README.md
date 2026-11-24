@@ -23,6 +23,8 @@ YMM4で作成した会話素材を `dialogue.setting` 形式で書き出し、Av
 
 ## 使い方
 
+[使い方動画（X）](https://x.com/sasori_nu21/status/2125235177337315352?a=u7mowBuoC5R6sh5VOFk&s=20)
+
 1. YMM4の「Dialogue出力」から会話フォルダを書き出します。
 2. AviUtl2の「ファイル > インポート > Dialogue Timeline読み込み...」を選び、出力フォルダを指定します。
 3. 再生ヘッド位置と選択レイヤーを基準に、字幕と音声オブジェクトが配置されます。
