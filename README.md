@@ -67,7 +67,7 @@ dotnet build .\src\DialogueExport\DialogueExport.csproj -c Release
 
 ## 動画ファイル
 
-YMM4上の動画素材も `video/` にコピーし、`dialogue.setting` の `videos` 配列に配置オフセット、長さ、素材内の開始位置、再生速度、元のレイヤーを記録します。AviUtl2側では動画ファイルオブジェクトとして読み込み、カット位置と再生速度を設定します。動画素材に音声が含まれている場合も、二重再生を避けるため動画オブジェクト側の音声は無効にします。
+YMM4上の動画素材はコピーせず、元ファイルの絶対パスを `dialogue.setting` の `videos` 配列に記録します。タイムライン上のオフセット、長さ、素材内の開始位置、再生速度、元のレイヤーも保存し、AviUtl2側では動画ファイルオブジェクトとして再構成します。動画素材に音声が含まれている場合も、二重再生を避けるため動画オブジェクト側の音声は無効にします。素材ファイルを移動すると、読み込み時にそのパスを参照できなくなります。
 
 ```json
 "videos": [
@@ -75,9 +75,9 @@ YMM4上の動画素材も `video/` にコピーし、`dialogue.setting` の `vid
     "index": 0,
     "offset": 120,
     "duration": 90,
-    "file": "video/0000.mp4",
+    "file": "C:/path/to/video.mp4",
     "source_offset_seconds": 2.5,
-    "playback_rate": 1.0,
+    "playback_rate": 100.0,
     "layer": 0
   }
 ]
