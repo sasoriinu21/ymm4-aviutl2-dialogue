@@ -12,6 +12,15 @@ YMM4で作成した会話素材を `dialogue.setting` 形式で書き出し、Av
 - [YMM4プラグイン: DialogueExport.dll](DialogueExport.dll)
 - [ソースコード・サンプル一式](ymm4-aviutl2-dialogue-source.zip)
 
+## インストール
+
+ビルド済みファイルをダウンロードし、それぞれ対応するアプリのプラグインフォルダに入れてください。ソースコードのビルドは不要です。
+
+- `DialogueTimeline.aux2` → AviUtl2のプラグインフォルダ
+- `DialogueExport.dll` → YMM4のプラグインフォルダ
+
+配置後に各アプリを起動（または再起動）するとプラグインを使えます。
+
 ## 使い方
 
 1. YMM4の「Dialogue出力」から会話フォルダを書き出します。
