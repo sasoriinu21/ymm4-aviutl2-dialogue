@@ -95,3 +95,30 @@ YMM4上の動画素材はコピーせず、元ファイルの絶対パスを `di
   }
 ]
 ```
+
+## 音声ファイル・画像ファイル
+
+YMM4上の通常の音声アイテムと画像アイテムも、動画と同様に素材をコピーせず、元ファイルの絶対パスを `dialogue.setting` に記録します。音声はタイムライン上の位置・長さ・レイヤーに加えて、素材内のカット位置と再生速度を記録します。画像は位置・表示時間・レイヤーを記録します。書き出し後に素材を移動すると参照できなくなるため、AviUtl2で読み込む時点でも同じパスから参照可能にしてください。
+
+```json
+"audio_files": [
+  {
+    "index": 0,
+    "offset": 120,
+    "duration": 90,
+    "file": "C:/path/to/music.wav",
+    "source_offset_seconds": 1.25,
+    "playback_rate": 100.0,
+    "layer": 0
+  }
+],
+"images": [
+  {
+    "index": 0,
+    "offset": 0,
+    "duration": 180,
+    "file": "C:/path/to/still.png",
+    "layer": 1
+  }
+]
+```
